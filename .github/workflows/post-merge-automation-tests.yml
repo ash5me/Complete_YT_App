@@ -46,24 +46,45 @@ jobs:
         run: |
           for attempt in {1..60}; do
             if curl --fail --silent http://localhost:8080/ > /dev/null; then
+              echo "Application is ready."
               exit 0
             fi
+
             if ! kill -0 "$(cat app.pid)" 2>/dev/null; then
               cat app.log
               exit 1
             fi
+
             sleep 2
           done
+
+          echo "Application did not start in time."
           cat app.log
           exit 1
 
       - name: Run Selenium TestNG suite
-        run: >
-          mvn --batch-mode
-          -Dheadless=true
-          -DbaseUrl=http://localhost:8080/
-          -Dsurefire.suiteXmlFiles=src/test/java/automation/testng.xml
-          test
+        run: |
+          mvn --batch-mode \
+            -Dheadless=true \
+            -DbaseUrl=http://localhost:8080/ \
+            -Dsurefire.suiteXmlFiles=src/test/java/automation/testng.xml \
+            test
+
+      - name: Verify tests were executed
+        run: |
+          if [ ! -f target/surefire-reports/testng-results.xml ]; then
+            echo "TestNG report was not generated."
+            exit 1
+          fi
+
+          TEST_COUNT=$(grep -oP 'total="\K[0-9]+' target/surefire-reports/testng-results.xml | head -1)
+
+          echo "TestNG tests executed: ${TEST_COUNT:-0}"
+
+          if [ -z "$TEST_COUNT" ] || [ "$TEST_COUNT" -eq 0 ]; then
+            echo "No TestNG tests were executed."
+            exit 1
+          fi
 
       - name: Show application logs on failure
         if: failure()
