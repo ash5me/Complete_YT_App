@@ -1,41 +1,497 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="29" passed="27" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-11-04T19:17:02 IST" name="Default suite" finished-at="2026-11-04T19:17:10 IST" duration-ms="8423">
+  <suite started-at="2026-11-12T14:17:14 IST" name="MyTube Manual Test Automation Suite" finished-at="2026-11-12T14:37:18 IST" duration-ms="1204008">
     <groups>
+      <group name="filter-sort">
+        <method signature="ManualTCTest.tc14_allCategoriesNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc14_allCategoriesNewestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc15_allCategoriesOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc15_allCategoriesOldestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc16_allCategoriesMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc16_allCategoriesMostPopular" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc17_tutorialNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc17_tutorialNewestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc18_tutorialOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc18_tutorialOldestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc19_tutorialMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc19_tutorialMostPopular" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc20_vlogsNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc20_vlogsNewestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc21_vlogsOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc21_vlogsOldestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc22_vlogsMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc22_vlogsMostPopular" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc23_reviewsNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc23_reviewsNewestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc24_reviewsOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc24_reviewsOldestFirst" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc25_reviewsMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc25_reviewsMostPopular" class="automation.ManualTCTest"/>
+      </group> <!-- filter-sort -->
+      <group name="channel-profile">
+        <method signature="ManualTCTest.tc06_profilePictureIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc06_profilePictureIsRendered" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc07_channelNameIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc07_channelNameIsDisplayed" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc08_subscriberCountIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc08_subscriberCountIsDisplayed" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc09_totalVideoCountIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc09_totalVideoCountIsDisplayed" class="automation.ManualTCTest"/>
+      </group> <!-- channel-profile -->
+      <group name="search">
+        <method signature="ManualTCTest.tc12_searchBoxReceivesFocus()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc12_searchBoxReceivesFocus" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc13_searchHandlesDifferentInputTypes()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc13_searchHandlesDifferentInputTypes" class="automation.ManualTCTest"/>
+      </group> <!-- search -->
+      <group name="navigation">
+        <method signature="ManualTCTest.tc01_pageIconReloadsPage()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc01_pageIconReloadsPage" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc02_pageIconHighlightsOnHover()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc02_pageIconHighlightsOnHover" class="automation.ManualTCTest"/>
+      </group> <!-- navigation -->
+      <group name="smoke">
+        <method signature="ManualTCTest.tc01_pageIconReloadsPage()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc01_pageIconReloadsPage" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc05_themeToggleChangesSiteTheme()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc05_themeToggleChangesSiteTheme" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc07_channelNameIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc07_channelNameIsDisplayed" class="automation.ManualTCTest"/>
+      </group> <!-- smoke -->
+      <group name="theme">
+        <method signature="ManualTCTest.tc03_bulbIconIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc03_bulbIconIsRendered" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc04_moonIconIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc04_moonIconIsRendered" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc05_themeToggleChangesSiteTheme()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc05_themeToggleChangesSiteTheme" class="automation.ManualTCTest"/>
+      </group> <!-- theme -->
+      <group name="video-cards">
+        <method signature="ManualTCTest.tc26_videoThumbnailsAreRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc26_videoThumbnailsAreRendered" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc27_videoTitlesAreDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc27_videoTitlesAreDisplayed" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc28_videoViewCountsAreDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc28_videoViewCountsAreDisplayed" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc29_timeSinceUploadIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc29_timeSinceUploadIsDisplayed" class="automation.ManualTCTest"/>
+      </group> <!-- video-cards -->
+      <group name="subscription">
+        <method signature="ManualTCTest.tc10_subscribeButtonChangesStatus()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc10_subscribeButtonChangesStatus" class="automation.ManualTCTest"/>
+        <method signature="ManualTCTest.tc11_subscribeStatusPersistsAfterReload()[pri:0, instance:automation.ManualTCTest@79d8407f]" name="tc11_subscribeStatusPersistsAfterReload" class="automation.ManualTCTest"/>
+      </group> <!-- subscription -->
     </groups>
-    <test started-at="2026-11-04T19:17:02 IST" name="Default test" finished-at="2026-11-04T19:17:10 IST" duration-ms="8423">
-      <class name="automation.homepage">
-        <test-method is-config="true" signature="setup()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:02 IST" name="setup" finished-at="2026-11-04T19:17:06 IST" duration-ms="4024" status="PASS">
+    <test started-at="2026-11-12T14:17:14 IST" name="All Manual Test Cases - TC01 to TC29" finished-at="2026-11-12T14:37:18 IST" duration-ms="1204008">
+      <class name="automation.ManualTCTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:17:14 IST" name="setUp" finished-at="2026-11-12T14:17:56 IST" duration-ms="42195" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="ValidChannelName()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:06 IST" name="ValidChannelName" finished-at="2026-11-04T19:17:06 IST" duration-ms="98" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="tc01_pageIconReloadsPage()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:17:56 IST" name="tc01_pageIconReloadsPage" description="TC01 - MyTube page icon reloads the page" finished-at="2026-11-12T14:17:57 IST" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidChannelName -->
-        <test-method is-config="true" signature="exit()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:06 IST" name="exit" finished-at="2026-11-04T19:17:06 IST" duration-ms="351" status="PASS">
+        </test-method> <!-- tc01_pageIconReloadsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:17:57 IST" name="tearDown" finished-at="2026-11-12T14:17:57 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- exit -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:06 IST" name="setup" finished-at="2026-11-04T19:17:10 IST" duration-ms="3460" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:17:57 IST" name="setUp" finished-at="2026-11-12T14:18:37 IST" duration-ms="40443" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="VerifyPageReload()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:10 IST" name="VerifyPageReload" finished-at="2026-11-04T19:17:10 IST" duration-ms="209" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="tc02_pageIconHighlightsOnHover()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:18:37 IST" name="tc02_pageIconHighlightsOnHover" description="TC02 - Page icon has a hover highlight" finished-at="2026-11-12T14:18:38 IST" duration-ms="250" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyPageReload -->
-        <test-method is-config="true" signature="exit()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:10 IST" name="exit" finished-at="2026-11-04T19:17:10 IST" duration-ms="206" status="PASS">
+        </test-method> <!-- tc02_pageIconHighlightsOnHover -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:18:38 IST" name="tearDown" finished-at="2026-11-12T14:18:38 IST" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- exit -->
-        <test-method is-config="true" signature="after_class()[pri:0, instance:automation.homepage@6200f9cb]" started-at="2026-11-04T19:17:10 IST" name="after_class" finished-at="2026-11-04T19:17:10 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:18:38 IST" name="setUp" finished-at="2026-11-12T14:19:18 IST" duration-ms="40066" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- after_class -->
-      </class> <!-- automation.homepage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setUp -->
+        <test-method signature="tc03_bulbIconIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:18 IST" name="tc03_bulbIconIsRendered" description="TC03 - Bulb icon renders on the theme toggle" finished-at="2026-11-12T14:19:18 IST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc03_bulbIconIsRendered -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:18 IST" name="tearDown" finished-at="2026-11-12T14:19:18 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:18 IST" name="setUp" finished-at="2026-11-12T14:19:58 IST" duration-ms="40172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc04_moonIconIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:58 IST" name="tc04_moonIconIsRendered" description="TC04 - Moon icon renders on the theme toggle" finished-at="2026-11-12T14:19:58 IST" duration-ms="112" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at automation.ManualTCTest.tc04_moonIconIsRendered(ManualTCTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc04_moonIconIsRendered -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:58 IST" name="tearDown" finished-at="2026-11-12T14:19:59 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:19:59 IST" name="setUp" finished-at="2026-11-12T14:20:39 IST" duration-ms="40246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc05_themeToggleChangesSiteTheme()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:20:39 IST" name="tc05_themeToggleChangesSiteTheme" description="TC05 - Theme toggle changes the site theme" finished-at="2026-11-12T14:20:39 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc05_themeToggleChangesSiteTheme -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:20:39 IST" name="tearDown" finished-at="2026-11-12T14:20:39 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:20:39 IST" name="setUp" finished-at="2026-11-12T14:21:20 IST" duration-ms="40475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc06_profilePictureIsRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:21:20 IST" name="tc06_profilePictureIsRendered" description="TC06 - Channel profile picture renders" finished-at="2026-11-12T14:21:20 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc06_profilePictureIsRendered -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:21:20 IST" name="tearDown" finished-at="2026-11-12T14:21:20 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:21:20 IST" name="setUp" finished-at="2026-11-12T14:22:00 IST" duration-ms="40188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc07_channelNameIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:00 IST" name="tc07_channelNameIsDisplayed" description="TC07 - Channel name is displayed" finished-at="2026-11-12T14:22:00 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc07_channelNameIsDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:00 IST" name="tearDown" finished-at="2026-11-12T14:22:00 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:00 IST" name="setUp" finished-at="2026-11-12T14:22:41 IST" duration-ms="40367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc08_subscriberCountIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:41 IST" name="tc08_subscriberCountIsDisplayed" description="TC08 - Subscriber count is displayed" finished-at="2026-11-12T14:22:41 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc08_subscriberCountIsDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:41 IST" name="tearDown" finished-at="2026-11-12T14:22:41 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:22:41 IST" name="setUp" finished-at="2026-11-12T14:23:21 IST" duration-ms="40355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc09_totalVideoCountIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:23:21 IST" name="tc09_totalVideoCountIsDisplayed" description="TC09 - Total channel video count is displayed" finished-at="2026-11-12T14:23:21 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc09_totalVideoCountIsDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:23:21 IST" name="tearDown" finished-at="2026-11-12T14:23:21 IST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:23:21 IST" name="setUp" finished-at="2026-11-12T14:24:03 IST" duration-ms="41691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc10_subscribeButtonChangesStatus()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:03 IST" name="tc10_subscribeButtonChangesStatus" description="TC10 - Subscribe button changes status" finished-at="2026-11-12T14:24:03 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc10_subscribeButtonChangesStatus -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:03 IST" name="tearDown" finished-at="2026-11-12T14:24:04 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:04 IST" name="setUp" finished-at="2026-11-12T14:24:45 IST" duration-ms="41440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc11_subscribeStatusPersistsAfterReload()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:45 IST" name="tc11_subscribeStatusPersistsAfterReload" description="TC11 - Subscribe status persists after reload" finished-at="2026-11-12T14:24:45 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc11_subscribeStatusPersistsAfterReload -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:45 IST" name="tearDown" finished-at="2026-11-12T14:24:45 IST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:24:45 IST" name="setUp" finished-at="2026-11-12T14:25:26 IST" duration-ms="40569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc12_searchBoxReceivesFocus()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:25:26 IST" name="tc12_searchBoxReceivesFocus" description="TC12 - Search box receives keyboard focus" finished-at="2026-11-12T14:25:26 IST" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc12_searchBoxReceivesFocus -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:25:26 IST" name="tearDown" finished-at="2026-11-12T14:25:26 IST" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:25:26 IST" name="setUp" finished-at="2026-11-12T14:26:06 IST" duration-ms="40228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc13_searchHandlesDifferentInputTypes()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:06 IST" name="tc13_searchHandlesDifferentInputTypes" description="TC13 - Search handles string, number, and special characters" finished-at="2026-11-12T14:26:07 IST" duration-ms="788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc13_searchHandlesDifferentInputTypes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:07 IST" name="tearDown" finished-at="2026-11-12T14:26:07 IST" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:07 IST" name="setUp" finished-at="2026-11-12T14:26:47 IST" duration-ms="40110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc14_allCategoriesNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:47 IST" name="tc14_allCategoriesNewestFirst" description="TC14 - All Categories + Newest First" finished-at="2026-11-12T14:26:48 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc14_allCategoriesNewestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:48 IST" name="tearDown" finished-at="2026-11-12T14:26:48 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:26:48 IST" name="setUp" finished-at="2026-11-12T14:27:28 IST" duration-ms="40393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc15_allCategoriesOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:27:28 IST" name="tc15_allCategoriesOldestFirst" description="TC15 - All Categories + Oldest First" finished-at="2026-11-12T14:27:29 IST" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc15_allCategoriesOldestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:27:29 IST" name="tearDown" finished-at="2026-11-12T14:27:29 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:27:29 IST" name="setUp" finished-at="2026-11-12T14:28:09 IST" duration-ms="40296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc16_allCategoriesMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:09 IST" name="tc16_allCategoriesMostPopular" description="TC16 - All Categories + Most Popular" finished-at="2026-11-12T14:28:09 IST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc16_allCategoriesMostPopular -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:09 IST" name="tearDown" finished-at="2026-11-12T14:28:10 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:10 IST" name="setUp" finished-at="2026-11-12T14:28:51 IST" duration-ms="41641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc17_tutorialNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:51 IST" name="tc17_tutorialNewestFirst" description="TC17 - Tutorial + Newest First" finished-at="2026-11-12T14:28:52 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc17_tutorialNewestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:52 IST" name="tearDown" finished-at="2026-11-12T14:28:52 IST" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:28:52 IST" name="setUp" finished-at="2026-11-12T14:29:32 IST" duration-ms="40418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc18_tutorialOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:29:32 IST" name="tc18_tutorialOldestFirst" description="TC18 - Tutorial + Oldest First" finished-at="2026-11-12T14:29:33 IST" duration-ms="401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc18_tutorialOldestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:29:33 IST" name="tearDown" finished-at="2026-11-12T14:29:33 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:29:33 IST" name="setUp" finished-at="2026-11-12T14:30:13 IST" duration-ms="40288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc19_tutorialMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:13 IST" name="tc19_tutorialMostPopular" description="TC19 - Tutorial + Most Popular" finished-at="2026-11-12T14:30:13 IST" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc19_tutorialMostPopular -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:13 IST" name="tearDown" finished-at="2026-11-12T14:30:14 IST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:14 IST" name="setUp" finished-at="2026-11-12T14:30:54 IST" duration-ms="40658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc20_vlogsNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:54 IST" name="tc20_vlogsNewestFirst" description="TC20 - Vlogs + Newest First" finished-at="2026-11-12T14:30:55 IST" duration-ms="437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc20_vlogsNewestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:55 IST" name="tearDown" finished-at="2026-11-12T14:30:55 IST" duration-ms="183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:30:55 IST" name="setUp" finished-at="2026-11-12T14:31:35 IST" duration-ms="40314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc21_vlogsOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:31:35 IST" name="tc21_vlogsOldestFirst" description="TC21 - Vlogs + Oldest First" finished-at="2026-11-12T14:31:36 IST" duration-ms="376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc21_vlogsOldestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:31:36 IST" name="tearDown" finished-at="2026-11-12T14:31:36 IST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:31:36 IST" name="setUp" finished-at="2026-11-12T14:32:16 IST" duration-ms="40281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc22_vlogsMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:16 IST" name="tc22_vlogsMostPopular" description="TC22 - Vlogs + Most Popular" finished-at="2026-11-12T14:32:16 IST" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc22_vlogsMostPopular -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:16 IST" name="tearDown" finished-at="2026-11-12T14:32:17 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:17 IST" name="setUp" finished-at="2026-11-12T14:32:57 IST" duration-ms="40762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc23_reviewsNewestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:57 IST" name="tc23_reviewsNewestFirst" description="TC23 - Reviews + Newest First" finished-at="2026-11-12T14:32:58 IST" duration-ms="427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc23_reviewsNewestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:58 IST" name="tearDown" finished-at="2026-11-12T14:32:58 IST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:32:58 IST" name="setUp" finished-at="2026-11-12T14:33:38 IST" duration-ms="40483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc24_reviewsOldestFirst()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:33:38 IST" name="tc24_reviewsOldestFirst" description="TC24 - Reviews + Oldest First" finished-at="2026-11-12T14:33:39 IST" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc24_reviewsOldestFirst -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:33:39 IST" name="tearDown" finished-at="2026-11-12T14:33:39 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:33:39 IST" name="setUp" finished-at="2026-11-12T14:34:19 IST" duration-ms="40506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc25_reviewsMostPopular()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:34:19 IST" name="tc25_reviewsMostPopular" description="TC25 - Reviews + Most Popular" finished-at="2026-11-12T14:34:20 IST" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc25_reviewsMostPopular -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:34:20 IST" name="tearDown" finished-at="2026-11-12T14:34:20 IST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:34:20 IST" name="setUp" finished-at="2026-11-12T14:35:00 IST" duration-ms="40463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc26_videoThumbnailsAreRendered()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:00 IST" name="tc26_videoThumbnailsAreRendered" description="TC26 - Video thumbnails render" finished-at="2026-11-12T14:35:16 IST" duration-ms="15510" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for automation.ManualTCTest$$Lambda/0x000000002028f000@6d6f6ca9 (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.51, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51949}, goog:processID: 12636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51949/devtoo..., se:cdpVersion: 157.0.8103.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a81d96d0463ff214796715fe988bc4a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for automation.ManualTCTest$$Lambda/0x000000002028f000@6d6f6ca9 (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.51, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51949}, goog:processID: 12636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51949/devtoo..., se:cdpVersion: 157.0.8103.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a81d96d0463ff214796715fe988bc4a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at automation.ManualTCTest.tc26_videoThumbnailsAreRendered(ManualTCTest.java:247)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc26_videoThumbnailsAreRendered -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:16 IST" name="tearDown" finished-at="2026-11-12T14:35:16 IST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:16 IST" name="setUp" finished-at="2026-11-12T14:35:56 IST" duration-ms="40059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc27_videoTitlesAreDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:56 IST" name="tc27_videoTitlesAreDisplayed" description="TC27 - Video titles are displayed correctly" finished-at="2026-11-12T14:35:56 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc27_videoTitlesAreDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:56 IST" name="tearDown" finished-at="2026-11-12T14:35:56 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:35:56 IST" name="setUp" finished-at="2026-11-12T14:36:37 IST" duration-ms="40307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc28_videoViewCountsAreDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:36:37 IST" name="tc28_videoViewCountsAreDisplayed" description="TC28 - View counts are displayed for all videos" finished-at="2026-11-12T14:36:37 IST" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc28_videoViewCountsAreDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:36:37 IST" name="tearDown" finished-at="2026-11-12T14:36:37 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:36:37 IST" name="setUp" finished-at="2026-11-12T14:37:18 IST" duration-ms="40493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc29_timeSinceUploadIsDisplayed()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:37:18 IST" name="tc29_timeSinceUploadIsDisplayed" description="TC29 - Time since upload is displayed" finished-at="2026-11-12T14:37:18 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc29_timeSinceUploadIsDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.ManualTCTest@79d8407f]" started-at="2026-11-12T14:37:18 IST" name="tearDown" finished-at="2026-11-12T14:37:18 IST" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.ManualTCTest -->
+    </test> <!-- All Manual Test Cases - TC01 to TC29 -->
+  </suite> <!-- MyTube Manual Test Automation Suite -->
 </testng-results>

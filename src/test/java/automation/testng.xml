@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MyTube Manual Test Automation Suite" verbose="2" parallel="none" preserve-order="true">
+<suite name="MyTube Manual Test Automation Suite" verbose="2" parallel="false" preserve-order="true">
     <test name="All Manual Test Cases - TC01 to TC29">
         <groups>
             <run>
