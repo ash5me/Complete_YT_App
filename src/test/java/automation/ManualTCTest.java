@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -89,9 +90,16 @@ public class ManualTCTest {
 
     @Test(description = "TC04 - Moon icon renders on the theme toggle", groups = {"theme"})
     public void tc04_moonIconIsRendered() {
+        // The initial theme may follow the operating system preference (light or dark).
+        // Verify that clicking the toggle changes its state instead of assuming it must be selected.
+        boolean initiallySelected = page.isThemeToggleSelected();
         page.clickThemeToggle();
-        Assert.assertTrue(page.isThemeToggleSelected());
-        Assert.assertTrue(page.isFontAwesomeIconRendered(".theme-toggle-icon .fa-moon"));
+        wait.until(d -> page.isThemeToggleSelected() != initiallySelected);
+
+        Assert.assertNotEquals(page.isThemeToggleSelected(), initiallySelected,
+                "The theme toggle should change state after it is clicked.");
+        Assert.assertTrue(page.isFontAwesomeIconRendered(".theme-toggle-icon .fa-moon"),
+                "The moon icon should have a rendered Font Awesome glyph.");
     }
 
     @Test(description = "TC05 - Theme toggle changes the site theme", groups = {"theme", "smoke"})
@@ -244,10 +252,32 @@ public class ManualTCTest {
         List<WebElement> thumbnails = page.videoThumbnails();
         Assert.assertEquals(thumbnails.size(), 6,
                 "The current repository dataset contains six video thumbnails.");
-        wait.until(d -> page.videoThumbnails().stream().allMatch(page::isImageLoaded));
+
+        try {
+            wait.until(d -> page.videoThumbnails().size() == 6
+                    && page.videoThumbnails().stream().allMatch(page::isImageLoaded));
+        } catch (TimeoutException e) {
+            List<String> unloadedImages = page.videoThumbnails().stream()
+                    .filter(thumbnail -> !page.isImageLoaded(thumbnail))
+                    .map(thumbnail -> {
+                        Object complete = ((JavascriptExecutor) driver)
+                                .executeScript("return arguments[0].complete;", thumbnail);
+                        return "title='" + thumbnail.getAttribute("alt")
+                                + "', src='" + thumbnail.getAttribute("src")
+                                + "', complete=" + complete
+                                + ", naturalWidth=" + page.imageNaturalWidth(thumbnail);
+                    })
+                    .collect(Collectors.toList());
+            throw new AssertionError(
+                    "Video thumbnails did not finish loading. Check Internet access and whether "
+                            + "picsum.photos is reachable. Unloaded images: " + unloadedImages, e);
+        }
+
         for (WebElement thumbnail : page.videoThumbnails()) {
-            Assert.assertTrue(thumbnail.isDisplayed());
-            Assert.assertTrue(page.imageNaturalWidth(thumbnail) > 0, "A video thumbnail is broken.");
+            Assert.assertTrue(thumbnail.isDisplayed(),
+                    "Thumbnail should be visible for: " + thumbnail.getAttribute("alt"));
+            Assert.assertTrue(page.imageNaturalWidth(thumbnail) > 0,
+                    "Thumbnail image is broken: " + thumbnail.getAttribute("src"));
         }
     }
 
