@@ -61,7 +61,7 @@ public class ManualTCTest {
         }
     }
 
-    @Test(description = "TC01 - MyTube page icon reloads the page", groups = {"smoke"})
+    @Test(description = "TC01 - MyTube page icon reloads the page", groups = {"navigation", "smoke"})
     public void tc01_pageIconReloadsPage() {
         Assert.assertEquals(page.navigationType(), "navigate");
         page.clickPageIcon();
@@ -70,7 +70,7 @@ public class ManualTCTest {
         Assert.assertEquals(page.navigationType(), "reload");
     }
 
-    @Test(description = "TC02 - Page icon has a hover highlight")
+    @Test(description = "TC02 - Page icon has a hover highlight", groups = {"navigation"})
     public void tc02_pageIconHighlightsOnHover() {
         String originalBackground = page.pageIconBackground();
         new Actions(driver).moveToElement(page.pageIcon()).perform();
@@ -82,19 +82,19 @@ public class ManualTCTest {
                 "The page icon background should change on hover.");
     }
 
-    @Test(description = "TC03 - Bulb icon renders on the theme toggle")
+    @Test(description = "TC03 - Bulb icon renders on the theme toggle", groups = {"theme"})
     public void tc03_bulbIconIsRendered() {
         Assert.assertTrue(page.isFontAwesomeIconRendered(".theme-toggle-icon .fa-lightbulb"));
     }
 
-    @Test(description = "TC04 - Moon icon renders on the theme toggle")
+    @Test(description = "TC04 - Moon icon renders on the theme toggle", groups = {"theme"})
     public void tc04_moonIconIsRendered() {
         page.clickThemeToggle();
         Assert.assertTrue(page.isThemeToggleSelected());
         Assert.assertTrue(page.isFontAwesomeIconRendered(".theme-toggle-icon .fa-moon"));
     }
 
-    @Test(description = "TC05 - Theme toggle changes the site theme", groups = {"smoke"})
+    @Test(description = "TC05 - Theme toggle changes the site theme", groups = {"theme", "smoke"})
     public void tc05_themeToggleChangesSiteTheme() {
         String themeBefore = page.currentTheme();
         boolean toggleBefore = page.isThemeToggleSelected();
@@ -104,31 +104,31 @@ public class ManualTCTest {
         Assert.assertEquals(page.isThemeToggleSelected(), !toggleBefore);
     }
 
-    @Test(description = "TC06 - Channel profile picture renders")
+    @Test(description = "TC06 - Channel profile picture renders", groups = {"channel-profile"})
     public void tc06_profilePictureIsRendered() {
         wait.until(d -> page.isImageLoaded(page.channelAvatar()));
         Assert.assertTrue(page.channelAvatar().isDisplayed());
         Assert.assertTrue(page.imageNaturalWidth(page.channelAvatar()) > 0);
     }
 
-    @Test(description = "TC07 - Channel name is displayed", groups = {"smoke"})
+    @Test(description = "TC07 - Channel name is displayed", groups = {"channel-profile", "smoke"})
     public void tc07_channelNameIsDisplayed() {
         Assert.assertEquals(page.channelName(), "Developer Channel");
     }
 
-    @Test(description = "TC08 - Subscriber count is displayed")
+    @Test(description = "TC08 - Subscriber count is displayed", groups = {"channel-profile"})
     public void tc08_subscriberCountIsDisplayed() {
         String stats = page.channelStats();
         Assert.assertTrue(stats.contains("1.2M subscribers"), "Actual header text: " + stats);
     }
 
-    @Test(description = "TC09 - Total channel video count is displayed")
+    @Test(description = "TC09 - Total channel video count is displayed", groups = {"channel-profile"})
     public void tc09_totalVideoCountIsDisplayed() {
         String stats = page.channelStats();
         Assert.assertTrue(stats.contains("42 Videos"), "Actual header text: " + stats);
     }
 
-    @Test(description = "TC10 - Subscribe button changes status")
+    @Test(description = "TC10 - Subscribe button changes status", groups = {"subscription"})
     public void tc10_subscribeButtonChangesStatus() {
         String statusBefore = page.subscribeButtonText();
         page.clickSubscribe();
@@ -137,7 +137,7 @@ public class ManualTCTest {
         Assert.assertTrue(List.of("Subscribe", "Subscribed").contains(page.subscribeButtonText()));
     }
 
-    @Test(description = "TC11 - Subscribe status persists after reload")
+    @Test(description = "TC11 - Subscribe status persists after reload", groups = {"subscription"})
     public void tc11_subscribeStatusPersistsAfterReload() {
         page.clickSubscribe();
         String statusBeforeReload = page.subscribeButtonText();
@@ -147,7 +147,7 @@ public class ManualTCTest {
         Assert.assertEquals(page.subscribeButtonText(), statusBeforeReload);
     }
 
-    @Test(description = "TC12 - Search box receives keyboard focus")
+    @Test(description = "TC12 - Search box receives keyboard focus", groups = {"search"})
     public void tc12_searchBoxReceivesFocus() {
         page.searchInput().click();
         Boolean focused = (Boolean) ((JavascriptExecutor) driver).executeScript(
@@ -158,7 +158,7 @@ public class ManualTCTest {
         Assert.assertNotEquals(caretColor, "rgba(0, 0, 0, 0)");
     }
 
-    @Test(description = "TC13 - Search handles string, number, and special characters")
+    @Test(description = "TC13 - Search handles string, number, and special characters", groups = {"search"})
     public void tc13_searchHandlesDifferentInputTypes() {
         for (String term : Arrays.asList("tutorial", "2024", "@#$%&*")) {
             page.search(term);
@@ -170,76 +170,76 @@ public class ManualTCTest {
         }
     }
 
-    @Test(description = "TC14 - All Categories + Newest First")
+    @Test(description = "TC14 - All Categories + Newest First", groups = {"filter-sort"})
     public void tc14_allCategoriesNewestFirst() {
         assertSearchFilterSort("All", "newest", Arrays.asList(
                 "Dark forest alone in the dark?", "Solo traveller guide", "Skyscraper everyday fit",
                 "Millionaire yatch vlog", "Beach day vlog", "Life of an farmer"));
     }
 
-    @Test(description = "TC15 - All Categories + Oldest First")
+    @Test(description = "TC15 - All Categories + Oldest First", groups = {"filter-sort"})
     public void tc15_allCategoriesOldestFirst() {
         assertSearchFilterSort("All", "oldest", Arrays.asList(
                 "Life of an farmer", "Beach day vlog", "Millionaire yatch vlog",
                 "Skyscraper everyday fit", "Solo traveller guide", "Dark forest alone in the dark?"));
     }
 
-    @Test(description = "TC16 - All Categories + Most Popular")
+    @Test(description = "TC16 - All Categories + Most Popular", groups = {"filter-sort"})
     public void tc16_allCategoriesMostPopular() {
         assertSearchFilterSort("All", "views-high", Arrays.asList(
                 "Skyscraper everyday fit", "Beach day vlog", "Solo traveller guide",
                 "Millionaire yatch vlog", "Dark forest alone in the dark?", "Life of an farmer"));
     }
 
-    @Test(description = "TC17 - Tutorial + Newest First")
+    @Test(description = "TC17 - Tutorial + Newest First", groups = {"filter-sort"})
     public void tc17_tutorialNewestFirst() {
         assertSearchFilterSort("Tutorial", "newest", Arrays.asList("Beach day vlog", "Life of an farmer"));
     }
 
-    @Test(description = "TC18 - Tutorial + Oldest First")
+    @Test(description = "TC18 - Tutorial + Oldest First", groups = {"filter-sort"})
     public void tc18_tutorialOldestFirst() {
         assertSearchFilterSort("Tutorial", "oldest", Arrays.asList("Life of an farmer", "Beach day vlog"));
     }
 
-    @Test(description = "TC19 - Tutorial + Most Popular")
+    @Test(description = "TC19 - Tutorial + Most Popular", groups = {"filter-sort"})
     public void tc19_tutorialMostPopular() {
         assertSearchFilterSort("Tutorial", "views-high", Arrays.asList("Beach day vlog", "Life of an farmer"));
     }
 
-    @Test(description = "TC20 - Vlogs + Newest First")
+    @Test(description = "TC20 - Vlogs + Newest First", groups = {"filter-sort"})
     public void tc20_vlogsNewestFirst() {
         assertSearchFilterSort("Vlog", "newest", Arrays.asList("Solo traveller guide", "Millionaire yatch vlog"));
     }
 
-    @Test(description = "TC21 - Vlogs + Oldest First")
+    @Test(description = "TC21 - Vlogs + Oldest First", groups = {"filter-sort"})
     public void tc21_vlogsOldestFirst() {
         assertSearchFilterSort("Vlog", "oldest", Arrays.asList("Millionaire yatch vlog", "Solo traveller guide"));
     }
 
-    @Test(description = "TC22 - Vlogs + Most Popular")
+    @Test(description = "TC22 - Vlogs + Most Popular", groups = {"filter-sort"})
     public void tc22_vlogsMostPopular() {
         assertSearchFilterSort("Vlog", "views-high", Arrays.asList("Solo traveller guide", "Millionaire yatch vlog"));
     }
 
-    @Test(description = "TC23 - Reviews + Newest First")
+    @Test(description = "TC23 - Reviews + Newest First", groups = {"filter-sort"})
     public void tc23_reviewsNewestFirst() {
         assertSearchFilterSort("Review", "newest", Arrays.asList(
                 "Dark forest alone in the dark?", "Skyscraper everyday fit"));
     }
 
-    @Test(description = "TC24 - Reviews + Oldest First")
+    @Test(description = "TC24 - Reviews + Oldest First", groups = {"filter-sort"})
     public void tc24_reviewsOldestFirst() {
         assertSearchFilterSort("Review", "oldest", Arrays.asList(
                 "Skyscraper everyday fit", "Dark forest alone in the dark?"));
     }
 
-    @Test(description = "TC25 - Reviews + Most Popular")
+    @Test(description = "TC25 - Reviews + Most Popular", groups = {"filter-sort"})
     public void tc25_reviewsMostPopular() {
         assertSearchFilterSort("Review", "views-high", Arrays.asList(
                 "Skyscraper everyday fit", "Dark forest alone in the dark?"));
     }
 
-    @Test(description = "TC26 - Video thumbnails render")
+    @Test(description = "TC26 - Video thumbnails render", groups = {"video-cards"})
     public void tc26_videoThumbnailsAreRendered() {
         List<WebElement> thumbnails = page.videoThumbnails();
         Assert.assertEquals(thumbnails.size(), 6,
@@ -251,7 +251,7 @@ public class ManualTCTest {
         }
     }
 
-    @Test(description = "TC27 - Video titles are displayed correctly")
+    @Test(description = "TC27 - Video titles are displayed correctly", groups = {"video-cards"})
     public void tc27_videoTitlesAreDisplayed() {
         List<String> actualTitles = page.videoTitles();
         Assert.assertEquals(actualTitles.size(), EXPECTED_VIDEO_TITLES.size());
@@ -259,7 +259,7 @@ public class ManualTCTest {
         Assert.assertEquals(Set.copyOf(actualTitles), EXPECTED_VIDEO_TITLES);
     }
 
-    @Test(description = "TC28 - View counts are displayed for all videos")
+    @Test(description = "TC28 - View counts are displayed for all videos", groups = {"video-cards"})
     public void tc28_videoViewCountsAreDisplayed() {
         Map<String, String> expectedViews = Map.of(
                 "Beach day vlog", "154.0K views",
@@ -280,7 +280,7 @@ public class ManualTCTest {
                 value.matches("\\d+(\\.\\d+)?[KM]? views"), "Invalid view count: " + value));
     }
 
-    @Test(description = "TC29 - Time since upload is displayed")
+    @Test(description = "TC29 - Time since upload is displayed", groups = {"video-cards"})
     public void tc29_timeSinceUploadIsDisplayed() {
         Map<String, String> metadata = page.videoMetadataByTitle();
         Assert.assertEquals(metadata.keySet(), EXPECTED_VIDEO_TITLES);
