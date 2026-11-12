@@ -1,2 +1,6 @@
+# Maven build output
 target/
-test-output/
+
+# TestNG generated reports and output
+/test-output/
+**/test-output/
