@@ -16,7 +16,7 @@ public class VideoRepository {
         new Video(
             "1", 
             "Beach day vlog", 
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1507525428034-b723cf961d3e.jpg", 
             "assets/videos/waves.mp4", 
             "Spending a relaxing day down at the sunny beach! Relax and enjoy the sound of the ocean waves.", 
             154000L, 
@@ -26,7 +26,7 @@ public class VideoRepository {
         new Video(
             "2", 
             "Millionaire yatch vlog", 
-            "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1567899378494-47b22a2ae96a.jpg", 
             "assets/videos/person.mp4", 
             "A full tour of a luxury yacht while exploring open waters. Behind the scenes of high life travel.", 
             89000L, 
@@ -36,7 +36,7 @@ public class VideoRepository {
         new Video(
             "3", 
             "Skyscraper everyday fit", 
-            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1483985988355-763728e1935b.jpg", 
             "assets/videos/motorcycle.mp4", 
             "Reviewing urban streetwear and outfits suited for working in high-rise skyscraper offices.", 
             320000L, 
@@ -46,7 +46,7 @@ public class VideoRepository {
         new Video(
             "4", 
             "Life of an farmer", 
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1500382017468-9049fed747ef.jpg", 
             "assets/videos/honeybee.mp4", 
             "An early morning look into daily operations on a self-sustaining organic farm.", 
             45000L, 
@@ -56,7 +56,7 @@ public class VideoRepository {
         new Video(
             "5", 
             "Solo traveller guide", 
-            "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1488646953014-85cb44e25828.jpg", 
             "assets/videos/squirrel.mp4", 
             "Essential safety and budget tips when traveling abroad completely on your own.", 
             112000L, 
@@ -66,7 +66,7 @@ public class VideoRepository {
         new Video(
             "6", 
             "Dark forest alone in the dark?", 
-            "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=640&h=360&q=80", 
+            "/assets/images/photo-1448375240586-882707db888b.jpg", 
             "assets/videos/lamp.mp4", 
             "Nighttime gear test and review deep inside the quiet woods.", 
             67000L, 
